@@ -1,0 +1,228 @@
+@charset "UTF-8";
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.header .left-buttons {
+  display: flex;
+  margin-left: 93px;
+}
+.header .button {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  background: #b4b8bb;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.2s;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+}
+.header .button:hover {
+  opacity: 0.7;
+}
+.header .geocoder {
+  z-index: 1;
+  width: 95%;
+  left: 50%;
+  top: 10px;
+}
+.header .geocoder .mapboxgl-ctrl-geocoder--input {
+  height: 44px;
+}
+.header .mapboxgl-ctrl-geocoder {
+  min-width: 100%;
+}
+
+.select .last-item {
+  border-radius: 0 0 5px 5px;
+}
+.select .select-current {
+  position: relative;
+  background: #b4b8bb;
+  cursor: pointer;
+  width: 71px;
+  height: 44px;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 10px;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.select .select-current::after {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  content: "";
+  color: #fff;
+  font-family: FontAwesome;
+  left: 50px;
+  top: 15px;
+}
+.select .select-item {
+  background: rgba(180, 184, 187, 0.85);
+  cursor: pointer;
+  width: 71px;
+  height: 44px;
+  font-size: 14px;
+  color: #fff;
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.select .select-item:hover {
+  opacity: 0.7;
+  border: none;
+}
+.select .select-body {
+  display: none;
+}
+.select .active-list {
+  display: block;
+  position: absolute;
+}
+.select .active-current {
+  border-radius: 5px 5px 0 0;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 100px 0 0;
+}
+.main-container .forecast {
+  display: flex;
+  width: 44%;
+  justify-content: space-between;
+}
+.main-container .forecast .temp-and-icon {
+  width: 60%;
+  margin-right: 50px;
+}
+.main-container .forecast .temp-and-icon .temp {
+  font-size: 235px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 88px;
+}
+.main-container .forecast .temp-and-icon .city {
+  color: white;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+.main-container .forecast .desc, .main-container .forecast .feels-like, .main-container .forecast .wind, .main-container .forecast .humidity, .main-container .forecast .dates {
+  color: white;
+  font-size: 24px;
+  padding: 6px;
+  text-transform: uppercase;
+}
+.main-container .forecast .clock {
+  color: white;
+  font-size: 18px;
+  padding: 6px;
+}
+.main-container .forecast .weather-icon {
+  width: 100%;
+  margin-top: -54px;
+}
+.main-container .map-container #map {
+  position: absolute;
+  width: 32%;
+  height: 50%;
+  border-radius: 5px;
+}
+.main-container .map-container .longitude, .main-container .map-container .latitude {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.main-container .map-container .mapboxgl-canvas {
+  -webkit-mask-image: url(http://cdn.onlinewebfonts.com/svg/img_5872.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center right;
+  -webkit-mask-clip: padding-box;
+}
+
+@media screen and (max-width: 920px) {
+  .main-container .forecast {
+    display: grid;
+    justify-items: center;
+  }
+
+  .main-container {
+    display: grid;
+    justify-items: center;
+  }
+
+  .header .geocoder {
+    width: 73%;
+    margin-top: 10px;
+    margin-left: 92px;
+  }
+
+  .coordinates {
+    display: none;
+  }
+
+  .main-container .map-container #map {
+    width: 55%;
+  }
+
+  .mapboxgl-canvas {
+    width: 177px;
+  }
+
+  main .forecast-for-3-days {
+    display: block;
+    margin-top: 362px;
+    margin-left: 125px;
+  }
+}
+.forecast-for-3-days {
+  display: flex;
+  margin: 10px 30px 30px 175px;
+}
+.forecast-for-3-days .day {
+  margin-right: 50px;
+}
+.forecast-for-3-days .day .dates {
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+}
+.forecast-for-3-days .day .day-of-the-week {
+  color: white;
+  font-size: 24px;
+  padding: 6px;
+  text-transform: uppercase;
+}
+.forecast-for-3-days .day .temperature {
+  color: white;
+  font-size: 60px;
+  padding: 6px;
+}
+.forecast-for-3-days .day .weather-icon {
+  width: 130%;
+}
+.forecast-for-3-days .day .icon-and-temp {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */
